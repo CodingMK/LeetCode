@@ -46,19 +46,15 @@ public class Q_447 {
         for (int i = 0; i < points.length; i++){
             for(int j = 0; j < points.length; j++){
                 if(j != i){
-
                     int distance = calcSquareDistance(points[i],points[j]);
                     map.put(distance, map.getOrDefault(distance,0) + 1);
-
                 }
             }
             for(Integer val : map.values()){
                 result += (val * (val-1));
             }
             map.clear();
-
         }
-
         return result;
     }
 
@@ -68,7 +64,6 @@ public class Q_447 {
 
     public static void main(String[] args) {
         Q_447 test = new Q_447();
-
 
         // [[3,6],[7,5],[3,5],[6,2],[9,1],[2,7],[0,9],[0,6],[2,6]], should return 10
         int[][] points = new int[][]{{3, 6}, {7, 5}, {3, 5}, {6, 2}, {9, 1}, {2, 7},
